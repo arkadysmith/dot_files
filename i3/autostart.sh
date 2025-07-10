@@ -3,7 +3,7 @@
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 # bar start
-~/.config/i3/polybar-i3 &
+#~/.config/i3/polybar-i3 &
 
 # compositor and notifications
 picom --animations -b &
