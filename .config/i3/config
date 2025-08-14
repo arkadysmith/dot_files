@@ -215,7 +215,7 @@ bindsym $mod+$smod+r restart
 bindsym $mod+$smod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 #set floating window size
-for_window [floating] resize set 320 240
+for_window [floating] resize set 480 320
 for_window [floating] move position center
 
 for_window [class="vlc"] floating enable
