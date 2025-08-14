@@ -14,7 +14,7 @@ set $wm_setting_key_right            Right
 
 set $wm_setting_app_terminal         alacritty
 set $wm_setting_app_browser          librewolf
-set $wm_setting_app_launcher         rofi -show combi
+set $wm_setting_app_launcher         rofi -show drun
 set $wm_setting_app_compositor       picom
 
 set $wm_color_border_active_bg       #8fbc8f
@@ -25,7 +25,7 @@ set $wm_color_background             #2E3440
 
 set $bar_setting_position            bottom
 set $bar_setting_mode                dock
-set $bar_setting_font                pango:monospace, Semibold 9
+set $bar_setting_font                pango:monospace, Semibold 8
 set $bar_setting_separator           " - "
 set $bar_setting_statusCommand       i3status
 set $bar_setting_trayoutput          full
@@ -59,7 +59,7 @@ bindsym $mod+d exec $wm_setting_app_launcher
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
+exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper.jpg
 exec_always --no-startup-id ~/.config/i3/autostart.sh
 
 # Use pactl to adjust volume in PulseAudio.
