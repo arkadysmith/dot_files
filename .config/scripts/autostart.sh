@@ -6,15 +6,15 @@ slstatus &
 lxpolkit &
 
 # background
-feh --bg-scale ~/.config/wallpaper.jpg &
+feh --bg-scale ~/dot_files/.config/wallpaper.jpg &
 
 # sxhkd
 # (re)load sxhkd for keybinds
 if hash sxhkd >/dev/null 2>&1; then
 	pkill sxhkd
 	sleep 0.5
-	sxhkd -c "$HOME/.config/suckless/sxhkd/sxhkdrc" &
+	sxhkd -c "$HOME/.config/sxhkd/sxhkdrc" &
 fi
 
-dunst -config ~/.config/suckless/dunst/dunstrc &
-picom --config ~/.config/suckless/picom/picom.conf -b &
+dunst -config ~/.config/dunst/dunstrc &
+picom --config ~/.config/picom/picom.conf -b &
