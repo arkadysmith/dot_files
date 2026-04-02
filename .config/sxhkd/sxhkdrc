@@ -12,11 +12,11 @@ super + shift + b
     
 # Launch Rofi Application Menu
 super + space
-   	rofi -show drun -modi drun -line-padding 4 -hide-scrollbar -show-icons -theme ~/.config/suckless/rofi/config.rasi
+   	rofi -show drun -modi drun -line-padding 4 -hide-scrollbar -show-icons -theme ~/.config/rofi/config.rasi
    	 
 # help with shortcuts
 super + slash
-	~/.config/suckless/scripts/help
+	~/.config/scripts/help
 	
 # Reload sxhkd (Hotkey Daemon)
 super + Escape
@@ -24,15 +24,15 @@ super + Escape
     
 # DWM Layout Menu
 super + shift + l
-    ~/.config/suckless/scripts/dwm-layout-menu.sh
+    ~/.config/scripts/dwm-layout-menu.sh
 
 # Attach focused window to tab group
 super + t
-    ~/.config/suckless/scripts/dwm-tabs attach
+    ~/.config/scripts/dwm-tabs attach
 
 # Detach focused window from tab group
 super + alt + t
-    ~/.config/suckless/scripts/dwm-tabs detach
+    ~/.config/scripts/dwm-tabs detach
 
 # Launch File Manager (Thunar)
 super + e
@@ -64,27 +64,27 @@ super + o
 	
 # Increase Volume (Custom Script)
 super + Insert
-    ~/.config/suckless/scripts/changevolume up
+    ~/.config/scripts/changevolume up
 
 # Decrease Volume (Custom Script)   
 super + Delete
-	~/.config/suckless/scripts/changevolume down
+	~/.config/scripts/changevolume down
 	
 # Toggle Mute (Custom Script)
 super + m
-	~/.config/suckless/scripts/changevolume mute
+	~/.config/scripts/changevolume mute
 	
 # Dedicated Key for Volume Up
 XF86AudioRaiseVolume
-	~/.config/suckless/scripts/changevolume up
+	~/.config/scripts/changevolume up
 	
 # Dedicated Key for Volume Down
 XF86AudioLowerVolume
-	~/.config/suckless/scripts/changevolume down
+	~/.config/scripts/changevolume down
 	
 # Dedicated Key for Mute
 XF86AudioMute
-	~/.config/suckless/scripts/changevolume mute
+	~/.config/scripts/changevolume mute
 
 # Increase Screen Brightness
 XF86MonBrightnessUp
@@ -112,4 +112,4 @@ super + s
     
 # Power Off/Reboot
 super + x 
-	~/.config/suckless/scripts/power
+	~/.config/scripts/power
