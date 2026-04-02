@@ -1,0 +1,12 @@
+alacritty|.config/alacritty
+nvim|.config/nvim
+picom|.config/picom
+rofi|.config/rofi
+sxhkd|.config/sxhkd
+dwm|.config/dwm
+slstatus|.config/slstatus
+st|.config/st
+scripts|.config/scripts
+dunst|.config/dunst
+
+
