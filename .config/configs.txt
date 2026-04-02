@@ -8,5 +8,6 @@ slstatus|.config/slstatus
 st|.config/st
 scripts|.config/scripts
 dunst|.config/dunst
+oxwm|.config/oxwm
 
 
