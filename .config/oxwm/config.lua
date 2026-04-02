@@ -13,7 +13,7 @@
 -- This makes it simple to change keybindings, colors, and settings in one place.
 
 -- Modifier key: "Mod4" is the Super/Windows key, "Mod1" is Alt
-local modkey = "Mod1"
+local modkey = "Mod4"
 
 -- Terminal emulator command (defualts to alacritty)
 local terminal = "alacritty"
