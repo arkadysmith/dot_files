@@ -68,6 +68,8 @@ static const struct arg args[] = {
 	{ cpu_perc, "^c#ff6b6b^ 󰻠 ^c#FFFFFF^%s%% ", NULL },
 	{ ram_perc, "^c#4fc3f7^ 󰍛 ^c#FFFFFF^%s%% ", NULL },
 	{ disk_perc, "^c#ffc107^ 󰋊 ^c#FFFFFF^%s%% ", "/" },
+	/*{ battery_perc, "^^ 󰁹%s%^^", "BAT0" },*/
+	/*{ wifi_perc, "^^ 󰖩 %s%^^", "wlan0" },*/
 	{ datetime, "^c#80bfff^ 󰸗 ^c#FFFFFF^%s ", "%a %b %-d" },
 	{ datetime, "^c#9c27b0^ 󰥔 ^c#FFFFFF^%s  ", "%-l:%M %p" },
 	};
