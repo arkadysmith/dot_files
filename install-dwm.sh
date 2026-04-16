@@ -54,7 +54,7 @@ msg() { echo -e "${CYAN}$*${NC}"; }
 
 # Export package lists for different distros
 export_packages() {
-    echo "=== DWM Setup - Package Lists for Different Distributions ==="
+    echo "=== DWM Dependencies Setup - Package Lists for Different Distributions ==="
     echo
     
     # Combine all packages
@@ -129,17 +129,6 @@ if [ "$EXPORT_PACKAGES" = true ]; then
     exit 0
 fi
 
-read -p "Install DWM? (y/n) " -n 1 -r
-echo
-[[ ! $REPLY =~ ^[Yy]$ ]] && exit 1
-
-# Update system
-if [ "$ONLY_CONFIG" = false ]; then
-    msg "Updating system..."
-    sudo apt-get update && sudo apt-get upgrade -y
-
-fi
-
 # Package groups for better organization
 PACKAGES_CORE=(
     xorg xorg-dev xbacklight xbindkeys xvkbd xinput
@@ -194,9 +183,6 @@ if [ "$ONLY_CONFIG" = false ]; then
 
     msg "Installing system utilities..."
     sudo apt-get install -y "${PACKAGES_UTILITIES[@]}" || die "Failed to install utilities"
-    
-    # Try firefox-esr first (Debian), then firefox (Ubuntu)
-    sudo apt-get install -y firefox-esr 2>/dev/null || sudo apt-get install -y firefox 2>/dev/null || msg "Note: firefox not available, skipping..."
 
     msg "Installing terminal tools..."
     sudo apt-get install -y "${PACKAGES_TERMINAL[@]}" || die "Failed to install terminal tools"
@@ -210,40 +196,9 @@ if [ "$ONLY_CONFIG" = false ]; then
  #   msg "Installing build dependencies..."
     sudo apt-get install -y "${PACKAGES_BUILD[@]}" || die "Failed to install build tools"
 
-    # Enable services
-    sudo systemctl enable avahi-daemon acpid
 else
     msg "Skipping package installation (--only-config mode)"
 fi
-
-# Handle existing config
-if [ -d "$CONFIG_DIR" ]; then
-    clear
-    read -p "Found existing suckless config. Backup? (y/n) " -n 1 -r
-    echo
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        mv "$CONFIG_DIR" "$CONFIG_DIR.bak.$(date +%s)"
-        msg "Backed up existing config"
-    else
-        clear
-        read -p "Overwrite without backup? (y/n) " -n 1 -r
-        echo
-        [[ $REPLY =~ ^[Yy]$ ]] || die "Installation cancelled"
-        rm -rf "$CONFIG_DIR"
-    fi
-fi
-
-# Copy configs
-msg "Setting up configuration..."
-mkdir -p "$CONFIG_DIR"
-cp -r "$SCRIPT_DIR"/suckless/* "$CONFIG_DIR"/ || die "Failed to copy configs"
-
-# Build suckless tools
-msg "Building suckless tools..."
-for tool in dwm slstatus st tabbed; do
-    cd "$CONFIG_DIR/$tool" || die "Cannot find $tool"
-    make && sudo make install || die "Failed to build $tool"
-done
 
 # Setup directories
 xdg-user-dirs-update
@@ -275,5 +230,5 @@ if [ "$ONLY_CONFIG" = false ]; then
 
 # Done
 echo -e "\n${GREEN}Installation complete!${NC}"
-echo "Now! Reboot!"
+echo "Now build DWM and restart"
 
