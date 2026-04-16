@@ -9,5 +9,5 @@ st|.config/st
 scripts|.config/scripts
 dunst|.config/dunst
 oxwm|.config/oxwm
-
+mango|.config/mango
 
