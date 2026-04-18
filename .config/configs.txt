@@ -10,4 +10,5 @@ scripts|.config/scripts
 dunst|.config/dunst
 oxwm|.config/oxwm
 mango|.config/mango
+niri|.config/niri
 
