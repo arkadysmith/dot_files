@@ -5,6 +5,6 @@ pipewire &
 pipewire-pulse &
 wireplumber &
 pgrep -x xdg-desktop-portal >/dev/null || xdg-desktop-portal &
-/usr/lib/xdg-desktop-portal-wlr 2>&1 &
+/usr/lib/xdg-desktop-portal-gnome 2>&1 &
 pactl set-sink-volume @DEFAULT_SINK@ 100% &
 bash cifs.sh &
