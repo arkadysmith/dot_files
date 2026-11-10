@@ -75,7 +75,7 @@ export_packages() {
     
     # Arch equivalents
     local arch_packages=(
-        "xorg-server xorg-xinit xorg-xbacklight xbindkeys xvkbd xorg-xinput"
+        "xbindkeys xvkbd"
         "base-devel sxhkd xdotool"
         "libnotify"
         "rofi dunst feh lxappearance network-manager-applet"
@@ -131,7 +131,7 @@ fi
 
 # Package groups for better organization
 PACKAGES_CORE=(
-    xorg xorg-dev xbacklight xbindkeys xvkbd xinput
+    xbacklight xbindkeys xvkbd xinput
     build-essential sxhkd xdotool dbus-x11
     libnotify-bin libnotify-dev libusb-0.1-4
 )
