@@ -13,5 +13,5 @@ Architectures: $(dpkg --print-architecture)
 Signed-By: /etc/apt/keyrings/xlibre-deb.asc
 EOF
 &&
-sudo apt-get update &
-sudo apt-get install xlibre &
+sudo apt-get update &&
+sudo apt-get install xlibre
