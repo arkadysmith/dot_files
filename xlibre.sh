@@ -14,4 +14,5 @@ Signed-By: /etc/apt/keyrings/xlibre-deb.asc
 EOF
 &&
 sudo apt-get update &&
-sudo apt-get install xlibre
+sudo apt-get install xlibre &&
+sudo apt-get install build-essential libx11-dev libxft-dev libxinerama-dev &&
