@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt update &&
-	sudo apt install -y xbacklight xbindkeys xvkbd xinput build-essentials sxhkd xdotool dbus-x11 libnotify-bin libnotify-dev libusb-0.1-4 &
+	sudo apt install -y xorg xorg-dev xbacklight xbindkeys xvkbd xinput build-essentials sxhkd xdotool dbus-x11 libnotify-bin libnotify-dev libusb-0.1-4 &
 #Xlibre 
 #sudo apt-get update &&
 #sudo apt-get install -y ca-certificates curl &&
